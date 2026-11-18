@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#a3121f">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="MyTube – strona wzorowana na YouTube">
+  <title>MyTube</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <button class="menu-icon" type="button" aria-label="Pokaż lub ukryj menu">☰</button>
+    <a class="logo" href="index.html"><span class="logo-icon">▶</span>My<span>Tube</span></a>
+    <input class="search" id="search" type="search" placeholder="Szukaj filmów..." aria-label="Szukaj filmów">
+  </header>
+
+  <nav class="sidebar">
+    <a href="#polecane" class="active"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Strona główna</a>
+    <a href="#na-czasie"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"/></svg>Na czasie</a>
+    <a href="#"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 8H4V6h16v2zm-2-6H6v2h12V2zm4 10v8c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2v-8c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2zm-6 4l-6-3.27v6.53L16 16z"/></svg>Subskrypcje</a>
+    <a href="#"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>Historia</a>
+
+    <hr>
+    <p class="menu-title">Odkrywaj</p>
+
+    <a href="#"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>Muzyka</a>
+    <a href="#"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.58 16.09l-1.09-7.66C20.21 6.46 18.52 5 16.53 5H7.47C5.48 5 3.79 6.46 3.51 8.43l-1.09 7.66C2.2 17.63 3.39 19 4.94 19c.68 0 1.32-.27 1.8-.75L9 16h6l2.25 2.25c.48.48 1.13.75 1.8.75 1.56 0 2.75-1.37 2.53-2.91zM11 11H9v2H8v-2H6v-1h2V8h1v2h2v1zm4-1c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm2 3c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>Gry</a>
+    <a href="#polecane"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/></svg>Filmy</a>
+
+    <hr>
+    <p class="menu-title">Twoje kanały</p>
+
+    <a href="#" class="channel new"><img class="avatar" src="img/avatars/techworld.svg" alt="TechWorld">TechWorld</a>
+    <a href="#" class="channel"><img class="avatar" src="img/avatars/natura.svg" alt="Natura Relax">Natura Relax</a>
+    <a href="#" class="channel"><img class="avatar" src="img/avatars/zwierzeta.svg" alt="Świat Zwierząt">Świat Zwierząt</a>
+  </nav>
+
+  <main>
+    <div class="chips">
+      <button class="chip active" type="button">Wszystkie</button>
+      <button class="chip" type="button">Podróże</button>
+      <button class="chip" type="button">Technologia</button>
+      <button class="chip" type="button">Zwierzęta</button>
+      <button class="chip" type="button">Relaks</button>
+    </div>
+
+    <section id="polecane">
+      <h1>Polecane filmy</h1>
+
+      <div class="videos">
+        <article class="video" data-category="Podróże">
+          <div class="thumbnail">
+            <img src="img/gory.jpg" data-fallback="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Góry">
+            <span class="duration">10:24</span>
+          </div>
+          <div class="details">
+            <img class="avatar" src="img/avatars/podroze.svg" alt="Podróże po Polsce">
+            <div class="info">
+              <h3>Najpiękniejsze miejsca w Polsce – TOP 10</h3>
+              <p>Podróże po Polsce</p>
+              <p>125 tys. wyświetleń • 2 dni temu</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="video" data-category="Technologia">
+          <div class="thumbnail">
+            <img src="img/komputer.jpg" data-fallback="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Komputer">
+            <span class="duration">12:37</span>
+          </div>
+          <div class="details">
+            <img class="avatar" src="img/avatars/techworld.svg" alt="TechWorld">
+            <div class="info">
+              <h3>Jak złożyć tani komputer do gier?</h3>
+              <p>TechWorld</p>
+              <p>342 tys. wyświetleń • tydzień temu</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="video" data-category="Zwierzęta">
+          <div class="thumbnail">
+            <img src="img/kot.jpg" data-fallback="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=800&q=80" alt="Kot">
+            <span class="duration">8:15</span>
+          </div>
+          <div class="details">
+            <img class="avatar" src="img/avatars/zwierzeta.svg" alt="Świat Zwierząt">
+            <div class="info">
+              <h3>Najzabawniejsze koty w internecie</h3>
+              <p>Świat Zwierząt</p>
+              <p>98 tys. wyświetleń • 4 dni temu</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="video" data-category="Relaks">
+          <div class="thumbnail">
+            <img src="img/jezioro.jpg" data-fallback="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" alt="Jezioro">
+            <span class="duration">14:52</span>
+          </div>
+          <div class="details">
+            <img class="avatar" src="img/avatars/natura.svg" alt="Natura Relax">
+            <div class="info">
+              <h3>Spokojne jezioro – idealny relaks</h3>
+              <p>Natura Relax</p>
+              <p>221 tys. wyświetleń • 6 dni temu</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="video" data-category="Podróże">
+          <div class="thumbnail">
+            <img src="img/miasto.jpg" data-fallback="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80" alt="Miasto">
+            <span class="duration">11:36</span>
+          </div>
+          <div class="details">
+            <img class="avatar" src="img/avatars/swiat.svg" alt="Ciekawy Świat">
+            <div class="info">
+              <h3>Najpiękniejsze miasta świata</h3>
+              <p>Ciekawy Świat</p>
+              <p>178 tys. wyświetleń • 5 dni temu</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="video" data-category="Relaks">
+          <div class="thumbnail">
+            <img src="img/zachod.jpg" data-fallback="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Zachód słońca">
+            <span class="duration">9:42</span>
+          </div>
+          <div class="details">
+            <img class="avatar" src="img/avatars/zdrowie.svg" alt="Zdrowe Życie">
+            <div class="info">
+              <h3>10 sposobów na lepsze samopoczucie</h3>
+              <p>Zdrowe Życie</p>
+              <p>64 tys. wyświetleń • 3 dni temu</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="no-results hidden" id="no-results">Brak filmów pasujących do wyszukiwania.</p>
+    </section>
+
+    <section id="na-czasie">
+      <h2>Na czasie</h2>
+      <p class="section-description">Popularne materiały w MyTube</p>
+
+      <div class="videos">
+        <article class="video" data-category="Technologia">
+          <div class="thumbnail">
+            <img src="img/komputer.jpg" data-fallback="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Gadżety">
+            <span class="duration">7:48</span>
+          </div>
+          <div class="details">
+            <img class="avatar" src="img/avatars/techworld.svg" alt="TechWorld">
+            <div class="info">
+              <h3>Top 5 gadżetów, które musisz mieć w 2026</h3>
+              <p>TechWorld</p>
+              <p>512 tys. wyświetleń • dzisiaj</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="video" data-category="Zwierzęta">
+          <div class="thumbnail">
+            <img src="img/kot.jpg" data-fallback="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=800&q=80" alt="Kot">
+            <span class="duration">6:03</span>
+          </div>
+          <div class="details">
+            <img class="avatar" src="img/avatars/zwierzeta.svg" alt="Świat Zwierząt">
+            <div class="info">
+              <h3>Koty, które podbiły internet</h3>
+              <p>Świat Zwierząt</p>
+              <p>287 tys. wyświetleń • wczoraj</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="video" data-category="Relaks">
+          <div class="thumbnail">
+            <img src="img/zachod.jpg" data-fallback="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Zachód słońca">
+            <span class="duration">15:20</span>
+          </div>
+          <div class="details">
+            <img class="avatar" src="img/avatars/natura.svg" alt="Natura Relax">
+            <div class="info">
+              <h3>Zachód słońca nad morzem – relaks</h3>
+              <p>Natura Relax</p>
+              <p>143 tys. wyświetleń • 2 dni temu</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 MyTube – projekt szkolny</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
